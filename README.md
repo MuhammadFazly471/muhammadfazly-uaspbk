@@ -1,5 +1,56 @@
-# Vue 3 + Vite
+# 🍽️ Aplikasi Manajemen Menu Restoran
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Aplikasi ini dibuat menggunakan **Vue 3**, **Pinia**, **Vue Router**, **Axios**, dan **TailwindCSS**. Aplikasi ini bertujuan untuk membantu pengelolaan menu makanan dan minuman pada restoran secara sederhana, cepat, dan efisien.
 
-Learn more about IDE Support for Vue in the [Vue Docs Scaling up Guide](https://vuejs.org/guide/scaling-up/tooling.html#ide-support).
+---
+
+## ✨ Fitur Utama
+
+- Menampilkan daftar menu berdasarkan kategori (Makanan & Minuman)
+- Menambah menu baru
+- Mengedit menu berdasarkan ID
+- Menghapus menu
+- Menandai menu tersedia atau tidak
+- Dashboard statistik (dummy)
+- Laporan transaksi & ringkasan menu (dummy)
+
+---
+
+## 🧭 Routing Aplikasi
+
+Berikut adalah daftar path URL yang digunakan beserta komponen dan fungsinya:
+
+| URL Path             | Name Route   | Komponen         | Fungsi                               |
+|----------------------|--------------|------------------|--------------------------------------|
+| `/`                  | `dashboard`  | `Dashboard.vue`  | Halaman dashboard utama              |
+| `/dashboard`         | `dashboard`  | `Dashboard.vue`  | Alias dashboard                      |
+| `/menu`              | `menu`       | `MenuList.vue`   | Daftar semua menu                    |
+| `/addmenu`           | `addmenu`    | `MenuAdd.vue`    | Form untuk menambah menu             |
+| `/editmenu/:id`      | `editmenu`   | `MenuEdit.vue`   | Form untuk mengedit menu berdasar ID|
+| `/laporan`           | `laporan`    | `Laporan.vue`    | Halaman laporan ringkasan            |
+
+---
+
+## 🌐 API Endpoint
+
+Aplikasi ini menggunakan backend mock API menggunakan **JSON Server** (default `http://localhost:3000/menu`).
+
+### Endpoint yang Digunakan:
+
+| Method | Endpoint             | Fungsi                               |
+|--------|----------------------|--------------------------------------|
+| GET    | `/menu`              | Mengambil semua data menu            |
+| POST   | `/menu`              | Menambahkan menu baru                |
+| PUT    | `/menu/:id`          | Memperbarui data menu                |
+| DELETE | `/menu/:id`          | Menghapus menu                       |
+
+### Contoh Data Menu:
+
+```json
+{
+  "id": "1",
+  "nama": "Nasi Goreng",
+  "kategori": "Makanan",
+  "harga": 25000,
+  "tersedia": true
+}
