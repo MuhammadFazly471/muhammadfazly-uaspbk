@@ -8,11 +8,11 @@
       "tersedia": true
     },
     {
-      "id": "2",
       "nama": "Mie Ayam Bakso",
       "kategori": "Makanan",
-      "harga": 22000,
-      "tersedia": true
+      "harga": 25000,
+      "tersedia": true,
+      "id": "2"
     },
     {
       "id": "3",
@@ -26,13 +26,6 @@
       "nama": "Jus Alpukat",
       "kategori": "Minuman",
       "harga": 12000,
-      "tersedia": false
-    },
-    {
-      "id": "5",
-      "nama": "Ayam Bakar",
-      "kategori": "Makanan",
-      "harga": 28000,
       "tersedia": false
     }
   ]
