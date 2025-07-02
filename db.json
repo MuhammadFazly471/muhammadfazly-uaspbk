@@ -1,0 +1,39 @@
+{
+  "menu": [
+    {
+      "id": "1",
+      "nama": "Nasi Goreng Spesial",
+      "kategori": "Makanan",
+      "harga": 25000,
+      "tersedia": true
+    },
+    {
+      "id": "2",
+      "nama": "Mie Ayam Bakso",
+      "kategori": "Makanan",
+      "harga": 22000,
+      "tersedia": true
+    },
+    {
+      "id": "3",
+      "nama": "Es Teh Manis",
+      "kategori": "Minuman",
+      "harga": 5000,
+      "tersedia": true
+    },
+    {
+      "id": "4",
+      "nama": "Jus Alpukat",
+      "kategori": "Minuman",
+      "harga": 12000,
+      "tersedia": false
+    },
+    {
+      "id": "5",
+      "nama": "Ayam Bakar",
+      "kategori": "Makanan",
+      "harga": 28000,
+      "tersedia": false
+    }
+  ]
+}
