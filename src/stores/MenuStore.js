@@ -16,7 +16,7 @@ export const useMenuStore = defineStore('menu', {
     actions: {
         async getMenus() {
             try {
-                const res = await axios.get('https://64269312-29d7-45b5-8a7e-bc7faad9acd1-00-1654syiqh5fll.pike.replit.dev/menu')
+                const res = await axios.get('https://uas-server-production-8298.up.railway.app/menu')
                 this.menus = res.data
             } catch (error) {
                 console.error("Gagal Fetch Data", error)
@@ -37,7 +37,7 @@ export const useMenuStore = defineStore('menu', {
                     ...menu
                 }
 
-                const res = await axios.post('https://64269312-29d7-45b5-8a7e-bc7faad9acd1-00-1654syiqh5fll.pike.replit.dev/menu/', newMenu)
+                const res = await axios.post('https://uas-server-production-8298.up.railway.app/menu/', newMenu)
                 this.menus.push(res.data)
 
             } catch (error) {
@@ -46,7 +46,7 @@ export const useMenuStore = defineStore('menu', {
         },
         async updateMenu(id, updatedMenu) {
             try {
-                await axios.put(`https://64269312-29d7-45b5-8a7e-bc7faad9acd1-00-1654syiqh5fll.pike.replit.dev/menu/${id}`, updatedMenu)
+                await axios.put(`https://uas-server-production-8298.up.railway.app/menu/${id}`, updatedMenu)
                 const index = this.menus.findIndex(item => item.id === id)
                 if (index !== -1) {
                     this.menus[index] = { id, ...updatedMenu }  
@@ -57,7 +57,7 @@ export const useMenuStore = defineStore('menu', {
         },
         async deleteMenu(id){
             try {
-                await axios.delete(`https://64269312-29d7-45b5-8a7e-bc7faad9acd1-00-1654syiqh5fll.pike.replit.dev/menu/${id}`)
+                await axios.delete(`https://uas-server-production-8298.up.railway.app/menu/${id}`)
                 console.log("berhasil delete")
                 this.getMenus()
             } catch (error) {
